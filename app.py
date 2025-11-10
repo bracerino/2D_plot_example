@@ -36,12 +36,12 @@ if uploaded_file is not None:
         col1, col2 = st.columns(2)
         
         with col1:
-            st.write("**Available Columns:**")
-            st.write(df.columns.tolist())
+            with st.expander("**Available Columns:**", expanded=False):
+                st.write(df.columns.tolist())
         
         with col2:
-            st.write("**Data Types:**")
-            st.write(df.dtypes.to_dict())
+             with st.expander("**Data Types:**", expanded=False):
+                st.write(df.dtypes.to_dict())
         
         st.divider()
         
